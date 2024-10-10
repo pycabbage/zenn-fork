@@ -1,6 +1,14 @@
 title: "CSS苦手を克服！基礎から学ぶCSS講座"
-summary: ""
-topics: ["html"]
+summary: "CSS苦手な人にもわかりやすいように`図`をたくさん使って説明しました。
+
+学べること
+・HTML、CSSの基礎
+・margin
+・height
+・padding
+・margin
+・border"
+topics: ["html", "css"]
 published: true
 price: 0 # 有料の場合200〜5000
 # 本に含めるチャプターを順番に並べましょう
