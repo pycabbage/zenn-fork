@@ -47,8 +47,6 @@ border-left: 4px double black;
 
 このようにして、要素の枠線をカスタマイズできます。
 
-皆さんのお手元でborderを試してみてください！
-
 ## 参考
 
 <https://developer.mozilla.org/ja/docs/Learn/CSS/Building_blocks/The_box_model#css_%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%83%A2%E3%83%87%E3%83%AB%E3%81%A8%E3%81%AF>
