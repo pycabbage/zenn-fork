@@ -1,0 +1,24 @@
+{
+    "name": "zenn",
+    // dockerイメージ
+    "image": "mcr.microsoft.com/devcontainers/base:jammy",
+    // nodeやpythonなどのインストール設定
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {}
+    },
+    "customizations": {
+        // カスタマイズ
+        "vscode": {
+            "extensions": [
+                "taichi.vscode-textlint", // 文章校正として、textlintの拡張機能
+                "DavidAnson.vscode-markdownlint", // Markdownの構文とスタイルをチェックの拡張機能
+                "hediet.vscode-drawio", // 図を記載する際に使うdrawioの拡張機能
+                "bierner.markdown-mermaid" // mermaidの記載もプレビューできるようにする拡張機能
+            ],
+            "settings": {}
+        }
+    },
+    // 起動時の実行コマンド
+    // 今回はnodejsのパッケージをインストール
+    "postCreateCommand": "yarn install"
+}

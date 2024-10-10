@@ -1,0 +1,21 @@
+
+強み
+AIを使える
+イメージ図で説明能力を補足できる（デザインにかける時間を増やす）
+
+
+弱み
+文字だけの説明がうまくない
+
+
+
+
+本は頻繁にアップデートした方がいい。
+本はできる限りまとめた方がいいように思う(HTML、CSSじゃできる限り1つの記事にする。)
+
+chapterの中にchapterを入れる仕組み
+https://zenn.dev/chario/books/tfc-aws-introductory-book/viewer/05_00_tfc_aws_deploy
+初期出版はhtml、htmlの基本とcssの歴史から、marginの解説まで
+
+var2 : flex
+var3 : デザインデータ
