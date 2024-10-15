@@ -19,3 +19,25 @@ https://zenn.dev/chario/books/tfc-aws-introductory-book/viewer/05_00_tfc_aws_dep
 
 var2 : flex
 var3 : デザインデータ
+
+
+作ってみようを組み込んでみるのはどうか。
+デザインデータをここで配布しmargin paddingを利用して作成してもらう
+ボタン系
+タグはpタグ
+->やらなくていい
+
+inline、block、inline-block
+その後にインライン、ブロックボックスを学び、インライン要素の特徴を掴む
+
+inline
+width,heihgtは指定できない
+改行されない
+
+inline-block
+margin、widthを効かせたいが、改行を使いたくない時に利用
+
+
+
+flex
+最後にタグを作って並べてもらう
