@@ -25,6 +25,11 @@ title: "ブロックボックスとインラインボックス"
 | block | `<h1>` , `<p>` , `<div>`|
 | inline | `<a>` , `<span>` , `<img>` |
 
+:::message
+<h1> や <p>、<div> のように、display: block を持つ要素をブロック要素と呼びます。
+一方で、<a>、<span>、<img> のように、display: inline を持つ要素はインライン要素と呼ばれます。
+:::
+
 ボックスの表示型を変更したい場合は`displayプロパティ`を利用します。
 
 `display:block`とすると、その要素はブロックボックスとなり
@@ -51,9 +56,9 @@ display:inline
 * 親要素いっぱいの幅をとる
 
 「これって当たり前の動きじゃないの？」って思う方もいるかもしれません。
-デフォルトでdisplay:blockの表示型をとっているタグが多いので、これが要素の当たり前の挙動だと捉えてしまうのも無理はありません。
+**デフォルトでdisplay:blockの表示型をとっているタグが多い**ので、これが要素の当たり前の挙動だと捉えてしまうのも無理はありません。
 代表的なのは`<h1>` , `<p>` , `<div>`とよく使用されるプロパティですね。
-ブロックボックスにはwidth,heightなどのプロパティを利用すると想定していたように動いてくれます。一方で、このノリでインラインブロックにwidth、height、padding、marginを指定すると反映されなくて困惑してしまう場合があります。
+ブロックボックスはwidth,heightなどのプロパティを利用すると想定していたように動いてくれます。一方で、このノリで**インラインブロックにwidth、height、padding、marginを指定すると反映されなくて**困惑してしまう場合があります。
 
 ## インラインボックスとは
 
@@ -67,12 +72,13 @@ display:inline
 これらの特徴を完全に理解する必要はありません。
 理解して欲しいのは、インラインボックスが適用された要素だと**改行されない**のと**width、height、padding、marginプロパティが期待通りに動作しない**と言うことです。
 
-どう言う時にインラインボックスであることで困るでしょうか？例を挙げてみます。
+どう言う時にインラインボックスであることが困るのでしょうか？例を挙げてみます。
 
 ### 例 : ボタンを作る時
 
 こんな感じのボタンを作りたかったとしましょう。
-[ボタン写真]
+![ボタン](https://storage.googleapis.com/zenn-user-upload/3499c52b9411-20241024.png)
+
 何か別ページに移動するボタンを作りたいと思った時に、aタグを使うのが一般的です。
 
 ```html:example.html
@@ -82,24 +88,35 @@ display:inline
 そして、このaタグはデフォルトでインラインブロックになっているので、widthを利用して横幅を調整しようと思っても期待通りに動作しません。
 
 ```css:example.css
-/* aタグはインライン要素だから、横幅が指定されない */
+/* aタグはインライン要素だから、widthが適用されない */
+/* paddingは一応適用される */
 a {
-  width: 200px;
-  padding: 10px;
+    width: 200px;
+    text-align: center;
+    padding: 5px 25px;
+    border-radius: 150px;
+    background-color: rgb(175, 216, 227);
 }
 ```
+
+![インラインボタン](https://storage.googleapis.com/zenn-user-upload/d35e432a2d58-20241024.png)
 
 なので、そんな時にdisplayプロパティでblockに変えてあげることで横幅を調整できるようにする必要があるわけです。
 
 ```css:example.css
-
 a {
-  width: 200px;
-  padding: 10px;
-  
-  /* 横幅が指定されるようになる */
-  display: block;
+    width: 200px;
+    text-align: center;
+    padding: 5px 25px;
+    border-radius: 150px;
+    background-color: rgb(175, 216, 227);
+    /* widthが適用される */
+    display: block;
 }
 ```
 
+![ブロック適用](https://storage.googleapis.com/zenn-user-upload/5e5602224dfd-20241024.png)
+
 どうでしょうか。ブロックボックスとインラインボックスの違いについて理解できたでしょうか。
+
+## inline-blockとは
