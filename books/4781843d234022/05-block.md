@@ -153,6 +153,9 @@ a {
 そうするとボタンが二つ並ぶようになります。
 ![インラインボックス](https://storage.googleapis.com/zenn-user-upload/5363dcc1f116-20241025.png)
 
+**ブロック要素を横に並べるときにinline-blockが使える**んだなぁという認識でいいのですが、のちにお伝えする`display:flex`があれば**inline-blockの出番はない**と考えていいと思います。
+参考 : <https://qiita.com/tosagatuo/items/c8b51150d20527df216d>
+
 ## 参考
 
 **ブロックボックスとインラインボックス**

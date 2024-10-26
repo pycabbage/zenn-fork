@@ -1,7 +1,8 @@
 ---
 title: "display:flexについて"
 ---
-
+* 親要素と子要素
+* inline-blockで良くねを解説
 
 ## 参考
 
