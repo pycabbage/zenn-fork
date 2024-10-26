@@ -18,8 +18,8 @@ title: "Chapter1: はじめに"
 
 **追加予定**
 
-* displey: flex
 * インライン、ブロック要素
+* displey: flex
 * デザインデータを使ってWebサイトを作る
 
 :::message
