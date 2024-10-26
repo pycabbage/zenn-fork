@@ -3,7 +3,7 @@ summary: "最初の頃は`margin`や`padding`、`display:flex`が難しく、CSS
 そんな苦手意識を払拭するような、誰かを補助できる本を目指して書いてみました。
 
 
-内容は追加と更新していくつもりです。
+内容は追加、更新していきます
 
 
 学べること
@@ -18,7 +18,13 @@ summary: "最初の頃は`margin`や`padding`、`display:flex`が難しく、CSS
 
 ・margin
 
-・border"
+・border
+
+・display:block、display:inline、display:inline-block
+
+"
+
+
 topics: ["html", "css", "プログラミング初心者"]
 published: true
 allow_override: true
