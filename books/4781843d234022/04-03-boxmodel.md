@@ -17,7 +17,7 @@ paddingの特徴は以下の3つです。それぞれ解説していきます。
 * 背景色が反映される
 * 上下左右など指定が可能
 ::: message
-以降実装していくのは、実験のようなものなので、みなさんは僕に習ってcssを追加しなくて大丈夫です。
+以降実装していくのは、実験のようなものなので、みなさんは僕に習ってCSSを追加しなくて大丈夫です。
 :::
 
 ### 余白を作る
@@ -36,7 +36,7 @@ paddingで作った余白には背景色が反映されます。先ほど`pタ�
 ### 上下左右など指定が可能
 
 さっきの説明では`padding: 100px`として`上下左右に余白`をつけていました。
-しかし、「右だけにpadding: 100pxにしたい！」というような場合があります。「どういう時？」となるかもしれませんが、皆さんが普段目にしている綺麗なWebサイトではそういった細かい指定によって出来上がっています。綺麗であればあるほど、細かくcssで指定してあげる必要があります。
+しかし、「右だけにpadding: 100pxにしたい！」というような場合があります。「どういう時？」となるかもしれませんが、皆さんが普段目にしている綺麗なWebサイトではそういった細かい指定によって出来上がっています。綺麗であればあるほど、細かくcssで指定してあげる必要があるので、ぜひ認識だけしておいて欲しいです。
 
 paddingの指定方法は以下の通りです。
 
@@ -74,35 +74,41 @@ padding: 100px 90px 80px 70px;
 
 ```css:style.css
 p{
-    　　/* 横幅を指定 */
-       width: 130px;
-       /* 文字の色を指定 */
-       color: #fff;
-       /* 背景色を指定 */
-       background-color: #0f0f0f;
-       /* 文字を中央に配置 */
-       text-align: center;
-   
-   /* 追加 */
-       /* 文字の大きさを指定 */
-       font-size: 14px;
-       /* 上下に8px、左右に5pxの余白 */
-       padding: 8px 5px;
-       /* 角丸を指定 */
-       border-radius: 18px;
+    /* 削除 */
+    /* 
+    　height: 38px;
+    　line-height: 38px; 
+    */
+
+    /* 横幅を指定 */
+    width: 130px;
+    /* 文字を中央に     */
+    text-align: center;
+    /* 文字の色を指定 */
+    color: #fff;
+    /* 背景色を指定 */
+    background-color: #0f0f0f;
+    /* 高さを指定 */
+    font-size: 14px;
+    /* 角丸にする */
+    border-radius: 18px;
+
+/* 追加 */
+    /* heightの代わりにpaddingを使う */
+    padding: 9px 0px;
 }
 ```
 
-結果
-![](https://storage.googleapis.com/zenn-user-upload/c2502f856f1a-20240923.png)
+**結果**
+![](https://storage.googleapis.com/zenn-user-upload/774685199a93-20241027.png)
+:::message
+paddingを使って要素の高さを調整する場合と、heightプロパティを使った場合では、要素の実際の高さが少し異なることがあります。しかし、今回はpaddingの使い方に焦点を当てているため、あまり細かい違いを気にせず、**paddingを使って縦横のサイズも調整できる**という点を押さえていただければ大丈夫です。
+:::
 
 paddingの違いに焦点を当てるとこんな感じになります。
 
-:::message
-border-radiusを利用することで四角かった箱が丸くなっています。
-:::
-![](https://storage.googleapis.com/zenn-user-upload/438ccfc6cd61-20240923.png)
+![padding9](https://storage.googleapis.com/zenn-user-upload/11a41d0bee1f-20241027.png)
 
 paddingを利用することで`文字`と`黒のボックス`との間に余白が生まれたと思います。そして同時に`高さにも変化`が生まれることが確認できたと思います。
 
-どうでしょうか。Youtubeのチャンネル登録ボタンの完成です。
+これで、height使わずにYoutubeのチャンネル登録ボタンの完成させることができました。

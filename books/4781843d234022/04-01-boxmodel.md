@@ -10,11 +10,11 @@ title: "　widthとはなんぞや"
 
 Youtubeのサムネイルを例にしてみてみましょう
 
-![](https://storage.googleapis.com/zenn-user-upload/531a93da0716-20240913.png)
+![サムネイル500](https://storage.googleapis.com/zenn-user-upload/531a93da0716-20240913.png)
 
 このサムネイルの画像は`width: 500px`となっており、`width`によって横幅が指定されています。
 そしてこのサムネイルの横幅を半分(250px)にしてみるとサムネイルの横幅が変化することがわかると思います。
-![](https://storage.googleapis.com/zenn-user-upload/78f028b5ca9b-20240913.png)
+![サムネイル半分](https://storage.googleapis.com/zenn-user-upload/78f028b5ca9b-20240913.png)
 
 このように、日々皆さんが利用しているWebサービスにおいて、画面の横幅を制御するための重要なプロパティが`width` です。
 
@@ -24,7 +24,7 @@ Youtubeのサムネイルを例にしてみてみましょう
 手を動かして自分で使ってみることで初めて理解におとしこめると思うので実際に作ってみましょう。
 
 VSCodeを開いて`index.html`、`style.css`を作成してください。
-![](https://storage.googleapis.com/zenn-user-upload/b063a5516970-20241001.png)
+![ファイル作成](https://storage.googleapis.com/zenn-user-upload/b063a5516970-20241001.png)
 index.htmlには以下の内容を
 
 ```html:index.html
@@ -88,7 +88,7 @@ p {
 
 青色のコンテンツ部分の横幅が小さくなったはずです。`右クリック`→`検証`で確認していきましょう。
 
-![](https://storage.googleapis.com/zenn-user-upload/4112735542b1-20240915.png)
+![コンテンツの確認](https://storage.googleapis.com/zenn-user-upload/4112735542b1-20240915.png)
 
 widthによって横幅を操作できることがわかったと思います。
 また、`text-align: center;`によって文字を`青色部分の中央`に配置することもできました。
@@ -105,7 +105,8 @@ p {
     color: #fff;
     /* 背景色を指定 */
     background-color: #0f0f0f;
-    
+    /* 文字の大きさ */
+    font-size: 14px;
 }
 ```
 
