@@ -32,8 +32,6 @@ a {
 そうするとボタンが二つ並ぶようになります。
 ![インラインボックス](https://storage.googleapis.com/zenn-user-upload/5363dcc1f116-20241025.png)
 
-参考 : <https://qiita.com/tosagatuo/items/c8b51150d20527df216d>
-
 ## 参考
 
 **ブロックボックスとインラインボックス**
