@@ -4,7 +4,6 @@ emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Next.js","Netlify","Vercel","Github Pages","Cloudflare Pages","Cloud Run"]
 published: true
-published_at: 2024-11-4 08:00
 ---
 ## 前提
 
