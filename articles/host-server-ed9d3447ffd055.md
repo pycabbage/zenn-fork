@@ -1,6 +1,6 @@
 ---
 title: "(個人開発者向け)　Next.jsをホストする代表的なサーバーを比較"
-emoji: "🤖"
+emoji: "🕺"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Next.js","Netlify","Vercel","Github Pages","Cloudflare Pages","Cloud Run"]
 published: true
@@ -139,7 +139,8 @@ Next.jsを静的ホストする場合に使えます。
 > GitHub Pages は、PHP、Ruby、Python などのサーバーサイド言語はサポートしていません。
 > 参考 : <https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages#static-site-generators>
 
-参考
+### 参考
+
 <https://github.com/orgs/community/discussions/23723>
 
 ## Cloudflare Pages
