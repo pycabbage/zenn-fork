@@ -1,0 +1,62 @@
+[33mb91e117[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: commit: 出版
+[33ma060d6d[m HEAD@{1}: checkout: moving from fix-host-setver to main
+[33m14dec3a[m[33m ([m[1;32mfix-host-setver[m[33m)[m HEAD@{2}: commit: 出版
+[33mf7131d6[m[33m ([m[1;31morigin/fix-host-setver[m[33m)[m HEAD@{3}: commit: 出版
+[33ma060d6d[m HEAD@{4}: checkout: moving from main to fix-host-setver
+[33ma060d6d[m HEAD@{5}: pull origin main: Fast-forward
+[33m1af1732[m HEAD@{6}: checkout: moving from host-server to main
+[33m4397d1c[m[33m ([m[1;31morigin/host-server[m[33m, [m[1;32mhost-server[m[33m)[m HEAD@{7}: commit: 出版
+[33mc477c5e[m HEAD@{8}: commit: 出版
+[33m1af1732[m HEAD@{9}: checkout: moving from main to host-server
+[33m1af1732[m HEAD@{10}: commit: mainブランチでpushしないとbookは反映されない
+[33m4d5b3c7[m HEAD@{11}: commit: 参考リンク消した
+[33m264bb17[m HEAD@{12}: commit: chapter小分け
+[33m61024bd[m HEAD@{13}: commit: padding部分を大幅に修正
+[33m030f15d[m HEAD@{14}: commit: インラインブロック修正
+[33m8d2f72a[m HEAD@{15}: commit: インラインブロック修正
+[33meb5451d[m HEAD@{16}: commit: inline-block必要ないぽい
+[33mf973d02[m HEAD@{17}: commit: 自己紹介
+[33mb9ccd54[m HEAD@{18}: commit: cover
+[33m7930389[m HEAD@{19}: commit: インラインボックス、ブロックボックス
+[33m60a65f6[m HEAD@{20}: commit: h
+[33m30eb4e8[m HEAD@{21}: commit: j
+[33mf7fcba6[m HEAD@{22}: commit: aws
+[33m10ad950[m HEAD@{23}: commit: aiの概要更新
+[33m8baba34[m HEAD@{24}: commit: 本の概要更新
+[33mc8a98c2[m HEAD@{25}: commit: 画質の変更
+[33m9797a59[m HEAD@{26}: commit: 予約投稿
+[33m55a23d4[m HEAD@{27}: commit: ci/cd投稿
+[33md7af48d[m HEAD@{28}: commit: ci/cd投稿
+[33m1bf7b74[m HEAD@{29}: commit: s
+[33m9e5270f[m HEAD@{30}: commit: 投稿false
+[33mdf7d848[m HEAD@{31}: commit: 投稿
+[33m259492c[m HEAD@{32}: commit: 出版
+[33m7eea4fe[m HEAD@{33}: commit: トピック修正
+[33m35f1f24[m HEAD@{34}: commit: ci.cd
+[33m57135f2[m HEAD@{35}: commit: border
+[33m162e04c[m HEAD@{36}: commit: border
+[33mff5048d[m HEAD@{37}: commit: summary
+[33mdc8ce26[m HEAD@{38}: commit: summary
+[33m3f0e803[m HEAD@{39}: commit: summary
+[33ma5e4761[m HEAD@{40}: commit: summary
+[33m9eac1f8[m HEAD@{41}: commit: summary
+[33m043a930[m HEAD@{42}: commit: summary
+[33m2ebcad9[m HEAD@{43}: commit: summary
+[33ma71b3e4[m HEAD@{44}: commit: summary
+[33m118e02e[m HEAD@{45}: commit: summary
+[33me267da3[m HEAD@{46}: commit: summary
+[33m09afd01[m HEAD@{47}: commit: Couldn't change ownership of savefile Test2
+[33mfd559ab[m HEAD@{48}: commit: published: true
+[33m781cb8e[m HEAD@{49}: commit: allow_override: true
+[33m35f86c1[m HEAD@{50}: commit: test4
+[33m92aca16[m HEAD@{51}: commit: test3
+[33m5d7cf7a[m HEAD@{52}: commit: article削除
+[33m987e949[m HEAD@{53}: commit: test2
+[33md87596b[m HEAD@{54}: commit: test
+[33mb5ce4a2[m HEAD@{55}: Branch: renamed refs/heads/main to refs/heads/main
+[33mb5ce4a2[m HEAD@{57}: commit: d
+[33m4a44dce[m HEAD@{58}: commit: d
+[33m4cb374b[m HEAD@{59}: commit: f
+[33mcb14f70[m HEAD@{60}: commit: f
+[33m9d13b23[m HEAD@{61}: Branch: renamed refs/heads/main to refs/heads/main
+[33m9d13b23[m HEAD@{63}: commit (initial): first commit

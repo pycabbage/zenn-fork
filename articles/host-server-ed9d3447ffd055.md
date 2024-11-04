@@ -2,7 +2,7 @@
 title: "(個人開発者向け)　Next.jsをホストする代表的なサーバーを比較"
 emoji: "🕺"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Next.js","Netlify","Vercel","Github Pages","Cloudflare Pages","Cloud Run"]
+topics: ["Next.js","Netlify","Vercel","CloudflarePages","CloudRun"]
 published: true
 ---
 ## 前提
