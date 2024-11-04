@@ -1,5 +1,5 @@
 ---
-title: "【個人規模】Next.jsをホストする代表的なサーバーを比較"
+title: "【個人規模】Next.jsをデプロイできる代表的なサーバーを比較しました。"
 emoji: "🕺"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Next.js","Netlify","Vercel","CloudflarePages","CloudRun"]
