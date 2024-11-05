@@ -2,20 +2,9 @@
 title: "【個人規模】Next.jsをデプロイできる代表的なサーバーを比較しました。"
 emoji: "🕺"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Next.js","Netlify","Vercel","CloudflarePages","CloudRun"]
+topics: ["Nextjs","Netlify","Vercel","CloudflarePages","CloudRun"]
 published: true
 ---
-## 前提
-
-VercelはNext.jsに最適化されたサーバーなので、迷ったらVercelを使いたいです。
-
-公式ドキュメントを見ても見つけられなかったので、ここら辺の明確な根拠はありません。
-しかし、**VercelとNext.jsは開発元が同じ**なので、Next.jsにホストするのに最適なインフラストラクチャが構築されていると考えられます。
-何よりもNext.jsで破壊的な変更がこの先起こらないとも限りません。その時にいち早く対応するのは開発元が同じであるVercelなのは必然かなと思います。
-よって、安定とパフォーマンスを選ぶならVercelが良いと考えています。
-
-しかし、このあたりはサービスの要件によると思います。
-Vercelを使っていた方もこの記事を見て、「CloudRunの方がいいんじゃないか？」「いいや、cloud Pagesだね」などなど、自分の最適を見つけていただければ嬉しいです。
 
 **本記事ではフリープランで利用することを想定しています(CloudRun除く)。**
 
@@ -28,9 +17,23 @@ Vercelを使っていた方もこの記事を見て、「CloudRunの方がいい
 - Cloud Run (商用可)
 - Amplify　追加予定
 
+## はじめに
+
+VercelはNext.jsに最適化されたサーバーなので、迷ったらVercelを使いたいです。
+
+公式ドキュメントを見ても見つけられなかったので、ここら辺の明確な根拠はありません。
+しかし、**VercelとNext.jsは開発元が同じ**なので、Next.jsにホストするのに最適なインフラストラクチャが構築されていると考えられます。
+何よりもNext.jsで破壊的な変更がこの先起こらないとも限りません。その時にいち早く対応するのは開発元が同じであるVercelなのは必然かなと思います。
+よって、安定とパフォーマンスを選ぶならVercelが良いと考えています。
+
+しかし、このあたりはサービスの要件によると思います。
+Vercelを使っていた方もこの記事を見て、「CloudRunの方がいいんじゃないか？」「いいや、cloud Pagesだね」などなど、自分の最適を見つけていただければ嬉しいです。
+
 :::message
 有料にするくらいユーザーからのトラフィックがある場合、Vercelの有料プランは必要になるかもしれないのでそこも考慮する必要があるかもしれません。
 :::
+
+<!--**アナリティクス**-->
 
 ## 知っておきたい用語
 
@@ -52,28 +55,27 @@ REST fullに基づいたWeb APIで、httpヘッダーが利用される。カス
 ### 特徴
 
 - 商用利用の不可
-- Next.jsと開発元と同じ
+- Next.jsと開発元が同じ
 - 高パフォーマンス
-- アナリティクス（期限あり）
+- アナリティクス利用可（期限あり）
 
 商用利用が不可ですが、デプロイもしやすいので初期リリース時にホストするのはありだと考えています。
 
 ### 商用利用不可
 
-freeプランでは、Webサイトに広告を貼るなどの行為を禁止しています。
+freeプランでは、Webサイトに広告を貼るなどの行為も禁止しています。
 
 >商用利用
 趣味のチームは非営利の個人使用のみに制限されています。プラットフォームを商用目的で使用する場合は、Pro プランまたは Enterprise プランのいずれかが必要です。
 >参考 : <https://vercel.com/docs/limits/fair-use-guidelines#commercial-usage>
-VercelはNext.jsと相性がいいのでパフォーマンスが高いと考えられます。
 
 :::message
 途中で商用利用したい場合には、cloudflare pages(商用可)への移行も可能なので最初にVercelをホスト先にするのはありだと思います。
 :::
 
-### Next.jsと開発元と同じ
+### Next.jsと開発元が同じ
 
- Next.jsと開発元と同じなので、Next.jsに大きな変更が起きてもいち早く対応されると考えられます。
+ Next.jsと開発元が同じなので、Next.jsに大きな変更が起きてもいち早く対応されると考えられます。
 
 ### 高パフォーマンス
 
@@ -90,6 +92,10 @@ Nextjsに最適化されたインフラストラクチャが構築されてい�
 > Vercel Web アナリティクスは**Google アナリティクスの 44 分の 1 のサイズな**ので、優れたサイト パフォーマンスを維持できます。
 参考 : <https://vercel.com/blog/vercel-web-analytics-is-now-generally-available>
 >
+
+:::message
+アナリティクスの部分は、より詳細にみれて無料であるsentryやdatadogにしてもいいかも知れません。
+:::
 
 ## **Github Pages**
 
@@ -150,7 +156,7 @@ Next.jsを静的ホストする場合に使えます。
 - 商用利用が可能
 - 簡単デプロイ&セキュリティ意識が高い
 - 帯域幅が無制限
-- アナリティクス利用可能
+- アナリティクス利用可
 - 高パフォーマンス
 
 商用利用が可能なホスティングサービスであり、cloudflareの他サービスとの連携もできるのでセキュリティとパフォーマンスの2つを兼ねることが可能です。
@@ -177,10 +183,9 @@ Cloudflare Pagesは簡単にデプロイすることができ、WAFやCDNとも�
 > ![帯域幅無制限](https://storage.googleapis.com/zenn-user-upload/f659105aeb04-20241103.png)
 >参考 : <https://www.cloudflare.com/ja-jp/developer-platform/products/pages/>
 >
-### アナリティクス利用可能
+### アナリティクス利用可
 
-(アナリティクスの部分は、詳細にみれて無料であるsentryやdatadogにしてもいいかも)
-無料でアナリティクス機能を利用できる
+アナリティクス機能を無料で利用できます。
 
 > Cloudflare Web Analytics は、DNS を変更したり Cloudflare のプロキシを使用したりすることなく、Web サイトのプライバシーを第一に考えた分析を無料で提供します。Cloudflare Web Analytics は、サイト訪問者が体験する Web ページのパフォーマンスを理解するのに役立ちます。
 >参考 : <https://developers.cloudflare.com/pages/how-to/web-analytics/>
@@ -201,9 +206,10 @@ Cloudflareは世界中にCDNエッジサーバーを配置しているため、�
 
 ## Netlify
 
-**特徴**
+### 特徴
 
 - 商用利用可
+- 簡単デプロイ
 
 調べると日本だと応答速度が遅いらしいという情報が検索で引っかかりました。
 しかし、現在ではエッジサーバーはTokyoにある感じがするのでこの問題も解消されたのだと思っています。
@@ -217,32 +223,79 @@ Cloudflareは世界中にCDNエッジサーバーを配置しているため、�
 
 <https://qiita.com/benjuwan/items/4a2f175b648791412203>
 
+## Amplify
+
+AWSサービスとの連携ができるのは強みだと思います。
+
+### 特徴
+
+- 簡単デプロイ
+- 他AWSサービスとの連携
+
+### 簡単デプロイ
+
+Vercelにデプロイするのと同じノリでデプロイできます。
+
+### 他AWSサービスとの連携
+
+認証サービスであるAmazon Cognito、NoSQL データベースサービスのDynamoDB、オブジェクトストレージサービス（画像などを保存）であるS3などとの連携が手軽にできます。
+
+ただ、コスト面がまだ調査不足で判明していないので後ほど追記します。
+便利そうだけど、コストによるという感じになりそうです。この後紹介するCloud Runもそうですが、Cloud従量課金制なので気をつけ手使いたいですね。
+
+### 参考
+
+<https://docs.amplify.aws/gen1/nextjs/prev/build-a-backend/auth/set-up-auth/>
+<https://blog.ashcolor.jp/blog/programming/vercel-vs-amplify>
+<https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/ssr-supported-features.html>
+
 ## Cloud Run
 
 ### 特徴
 
 - 簡単デプロイ
-- 底コスト
+- コンテナの知見と運用経験を得られる
+- どんな言語でもOK
+- 従量課金制
 - オートスケーリング
 - 他GCPサービスとの連携
 - コンテナ構築が任意となっている
+- コールドスタート
+
+Cloud Runは、GCP(Google Cloud Platform)の提供するサービスの1種で、類似サービスはAWS Fargateです。
+AWS Fargateはインフラを構築するのに学習コストがかかるほか、サーバー代も割とでかいです。
+しかし、AWS Fargateと異なり、デプロイのしやすさと費用の観点でとても良いサービスなので、Cloud Runを今回紹介させていただきます。
+料金はかかりますが、月数十円に抑えることも可能です。
+
+コストのかかるAWS FargateやGKEでのサービス運用をいきなり始めるのではなく、まずCloud Runでの運用を選択する現場も増えてきているようです。
 
 ### 簡単デプロイ
 
-類似サービスはAWSのECS on Fargateです。
-ECS on Fargateはインフラを構築するのに学習コストがかかるほか、サーバー代も割とでかいです。
-しかし、ECS on Fargateと異なり、デプロイのしやすさと費用の観点でCloud RunをNext.jsをホストできるサーバーの候補に入れさせていただきました。
-料金はかかりますが、月数十円に抑えられるレベルです。
+一見するとデプロイが難しそうなサービスに見えますが、実際にはコンテナイメージをレジストリにプッシュし、Vercelのように画面でぽちぽち操作をするだけで簡単にデプロイできます。
+デプロイはしやすいですが、今回比較している他サービスに比べると手間はかかってしまいます。
 
-### 底コスト
+### コンテナの知見と運用経験を得られる
 
-必要な時に必要な分だけインスタンスを稼働するような仕組みなので、ECS on Fargateのように常にインスタンスを稼働させる必要がなく費用を抑えることができます。
+Cloud Runを使う場合、ある程度コンテナ技術への理解が必要です。
+そのため、コンテナの学習、運用を経験するにはちょうどいい題材だと思います。
+
+### どんな言語でもOK
+
+Cloud Runはコンテナをベースとしているので、dockerで動かせる技術であれば動作します。
+そのため、バックエンドでGoやRailsなどをデプロイしたいと言った場合にも活用できます。
+> 任意の言語で書かれたコードのサポート : Cloud Run はコンテナをベースとしているので、任意の言語でコードを作成でき、任意のバイナリやフレームワークを使用できます。
+> 参考 : <https://cloud.google.com/blog/ja/products/containers-kubernetes/when-to-use-google-kubernetes-engine-vs-cloud-run-for-containers>
+
+### 従量課金制
+
+必要な時に必要な分だけインスタンスを稼働させる仕組みなので、常にインスタンスを稼働させる必要がなく費用を抑えることができます。
+リクエストがない場合には、インスタンスが起動しないので料金が発生しません。
 > ゼロおよび最小インスタンスへのスケーリング
 > 参考 : <https://cloud.google.com/run/docs/overview/what-is-cloud-run?hl=ja#scale-to-zero>
 
 ### オートスケーリング
 
-インスタンスの数を自動で調整することができ、リクエストが突然増えても処理することが可能です。
+インスタンスの数を自動調整することができ、リクエストが突然増えても処理することが可能です。
 > ゼロおよび最小インスタンスへのスケーリング
 >
 >
@@ -253,6 +306,11 @@ ECS on Fargateはインフラを構築するのに学習コストがかかるほ
 
 ### 他GCPサービスとの連携
 
+他GCPサービスとの連携が可能であり、特にDBとして無料枠の大きいFirestoreを利用することができます。
+AWS、GCPなどのCloudサービスは、特にDBの費用が大きいです。しかし、このDBの部分をFirestoreにすることでコストを最小限に抑えてサービスを運営していくことが可能になります。
+
+ただ、 **FirestoreはNoSQLデータベース**なので、要件によっては合わないこともあるかもしれません。
+
 > Google では、Google Cloud 上の他のサービスと連携できるように Cloud Run を構築しているため、さまざまな機能を備えたアプリケーションを構築できます。
 >
 >
@@ -260,26 +318,32 @@ ECS on Fargateはインフラを構築するのに学習コストがかかるほ
 > 参考 : <https://cloud.google.com/run/docs/overview/what-is-cloud-run?hl=ja>
 >
 
+### GKEへの移行可能
+
+サービスが拡大してきたらGKEへの移行もできます。
+
 ### コンテナ構築が任意となっている
 
 > お好みの言語、フレームワーク、ライブラリを使用してコードを記述し、それをコンテナとしてパッケージ化して「gcloud run deploy」を実行すれば、本番環境での稼働に必要なものがすべて揃った状態でアプリがデプロイされます。コンテナの構築は完全に任意です。Go、Node.js、Python、Java、.NET Core、Ruby を使用している場合は、使用している言語のベスト プラクティスに従って、コンテナをビルドする[ソースベースのデプロイ](https://cloud.google.com/run/docs/deploying-source-code) オプションを使用できます。
 参考 : <https://cloud.google.com/run?hl=ja>
 >
 
+### コールドスタート
+
+コンテナの起動に時間がかかる(コールドスタート)ため、最初のリクエストに対する応答が遅くなることがあります。
+> インスタンスは必要に応じてスケーリングされるため、起動時間がサービスのレイテンシに影響します。Cloud Run は、インスタンスの起動とリクエストの処理を切り離しますが、リクエストは新しいインスタンスが起動するまで待機してから処理されることがあります。これは特にゼロからスケーリングする場合に起こります。これは「コールド スタート」と呼ばれます。
+> 参考 : <https://cloud.google.com/run/docs/tips/general?hl=ja#start_containers_quickly>
+
 ### 参考
 
+<https://cloud.google.com/blog/ja/products/containers-kubernetes/when-to-use-google-kubernetes-engine-vs-cloud-run-for-containers>
 <https://cloud.google.com/run?hl=ja>
 <https://cloud.google.com/run/docs/overview/what-is-cloud-run?hl=ja>
 <https://envader.plus/article/413>
 
-## Amplify
-
-追加予定です。
-
-### 参考
-
-<https://blog.ashcolor.jp/blog/programming/vercel-vs-amplify>
-<https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/ssr-supported-features.html>
+コスト
+<https://cloud.google.com/run/pricing>
+<https://zenn.dev/tellernovel_inc/articles/d200f595aa68e5>
 
 ## 類似の記事
 
