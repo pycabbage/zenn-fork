@@ -11,7 +11,7 @@ published: true
 比較するホスティングサービス
 
 - Vercel (商用不可)
-- Github Pages (商用不可)
+- GitHub Pages (商用不可)
 - Cloudflare Pages (商用可)
 - Netlify (商用可)
 - Cloud Run (商用可)
@@ -38,7 +38,7 @@ Vercelを使っていた方もこの記事を見て、「Cloud Runの方がい�
 ## 知っておきたい用語
 
 :::details .htaccess
-Webサーバーの動作をディレクトリ単位で制御することができるので、Github Pagesでカスタムヘッダーを付与することが可能かもしれないと思い、今回調査しました。
+Webサーバーの動作をディレクトリ単位で制御することができるので、GitHub Pagesでカスタムヘッダーを付与することが可能かもしれないと思い、今回調査しました。
 
 :::
 
@@ -97,7 +97,7 @@ Nextjsに最適化されたインフラストラクチャが構築されてい�
 アナリティクスの部分は、より詳細にみれて無料であるsentryやdatadogにしてもいいかも知れません。
 :::
 
-## **Github Pages**
+## **GitHub Pages**
 
 ### 特徴
 
@@ -105,7 +105,7 @@ Nextjsに最適化されたインフラストラクチャが構築されてい�
 - 開発者側でのヘッダー付与が不可(静的ホストしかできない)
 - サーバーサイド言語のデプロイはできない
 
-開発をGithubで統一して行えるのは、開発効率も上がると思うのでメリットだと思います。
+開発をGitHubで統一して行えるのは、開発効率も上がると思うのでメリットだと思います。
 
 ### 商用利用不可
 
@@ -125,18 +125,18 @@ Nextjsに最適化されたインフラストラクチャが構築されてい�
 
 やり方はありますが、ちょっと手間かかりそうですね。
 :::message
-自分はsqlite.wasmを利用したかったのですが、このヘッダー付与が難しそうだったのでGithub Pagesの利用は断念しました。
+自分はsqlite.wasmを利用したかったのですが、このヘッダー付与が難しそうだったのでGitHub Pagesの利用は断念しました。
 
 > Warning
 For this to work, you need to set the following headers on your server:
 `Cross-Origin-Opener-Policy: same-origin`
-`Cross-Origin-Embedder-Policy: require-corp
+`Cross-Origin-Embedder-Policy: require-corp`
 参考 : <https://github.com/sqlite/sqlite-wasm>
 
 :::
 
 **.htaccessをサポートしてない（たぶん）**
-.htaccessの設定をいじることでカスタムヘッダーを利用できると思ったのですが、Github Pagesはその辺りをサポートしていないっぽいです。
+.htaccessの設定をいじることでカスタムヘッダーを利用できると思ったのですが、GitHub Pagesはその辺りをサポートしていないっぽいです。
 公式ドキュメントでは触れられていないですが、そういった(古い)記事を見ます。
 
 ### サーバーサイド言語のデプロイはできない
