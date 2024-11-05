@@ -281,7 +281,7 @@ Cloud Runを使う場合、ある程度コンテナ技術への理解が必要�
 
 ### どんな言語でもOK
 
-Cloud Runはコンテナをベースとしているので、dockerで動かせる技術であれば動作します。
+Cloud Runはコンテナをベースとしているので、任意の言語でコードを作成でき、任意のバイナリやフレームワークを使用できます。
 そのため、バックエンドでGoやRailsなどをデプロイしたいと言った場合にも活用できます。
 > 任意の言語で書かれたコードのサポート : Cloud Run はコンテナをベースとしているので、任意の言語でコードを作成でき、任意のバイナリやフレームワークを使用できます。
 > 参考 : <https://cloud.google.com/blog/ja/products/containers-kubernetes/when-to-use-google-kubernetes-engine-vs-cloud-run-for-containers>
