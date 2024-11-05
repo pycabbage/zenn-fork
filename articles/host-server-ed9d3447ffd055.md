@@ -1,5 +1,5 @@
 ---
-title: "【個人規模】Next.jsをデプロイできる代表的なサーバーを比較しました。"
+title: "【個人規模】Next.jsをデプロイできる代表的なサーバーのまとめ"
 emoji: "🕺"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Nextjs","Netlify","Vercel","CloudflarePages","CloudRun"]
@@ -11,7 +11,7 @@ published: true
 比較するホスティングサービス
 
 - Vercel (商用不可)
-- Github Pages (商用不可)
+- GitHub Pages (商用不可)
 - Cloudflare Pages (商用可)
 - Netlify (商用可)
 - Cloud Run (商用可)
@@ -27,7 +27,7 @@ VercelはNext.jsに最適化されたサーバーなので、迷ったらVercel�
 よって、安定とパフォーマンスを選ぶならVercelが良いと考えています。
 
 しかし、このあたりはサービスの要件によると思います。
-Vercelを使っていた方もこの記事を見て、「CloudRunの方がいいんじゃないか？」「いいや、cloud Pagesだね」などなど、自分の最適を見つけていただければ嬉しいです。
+Vercelを使っていた方もこの記事を見て、「CloudRunの方がいいんじゃないか？」「いいや、Cloudflare Pagesだね」などなど、自分の最適を見つけていただければ嬉しいです。
 
 :::message
 有料にするくらいユーザーからのトラフィックがある場合、Vercelの有料プランは必要になるかもしれないのでそこも考慮する必要があるかもしれません。
@@ -38,16 +38,17 @@ Vercelを使っていた方もこの記事を見て、「CloudRunの方がいい
 ## 知っておきたい用語
 
 :::details .htaccess
-Webサーバーの動作をディレクトリ単位で制御することができるので、Github Pagesでカスタムヘッダーを付与することが可能かもしれないと思い、今回調査しました。
+Webサーバーの動作をディレクトリ単位で制御することができるので、GitHub Pagesでカスタムヘッダーを付与することが可能かもしれないと思い、今回調査しました。
 
 :::
 
-::: details httpヘッダー
-CORSなどのヘッダーを付与し、セキュリティを高めることができます。
-
-REST fullに基づいたWeb APIで、httpヘッダーが利用される。カスタムヘッダーとして柔軟にヘッダーを活用してサーバー側にデータを送信することが可能になります
-
+::: details HTTPヘッダー
+HTTPヘッダーは、HTTPリクエストやレスポンスに付加情報を提供するためのものです。
+CORSなどのヘッダーを付与し、特殊な挙動を実現できます。
 <https://apidog.com/jp/blog/how-to-check-http-headers/>
+
+> HTTP ヘッダーにより、 HTTP リクエストやレスポンスでクライアントやサーバーが追加情報を渡すことができます。
+> <https://developer.mozilla.org/ja/docs/Web/HTTP/Headers>
 :::
 
 ## Vercel
@@ -66,11 +67,11 @@ REST fullに基づいたWeb APIで、httpヘッダーが利用される。カス
 freeプランでは、Webサイトに広告を貼るなどの行為も禁止しています。
 
 >商用利用
-趣味のチームは非営利の個人使用のみに制限されています。プラットフォームを商用目的で使用する場合は、Pro プランまたは Enterprise プランのいずれかが必要です。
+>趣味のチームは非営利の個人使用のみに制限されています。プラットフォームを商用目的で使用する場合は、Pro プランまたは Enterprise プランのいずれかが必要です。
 >参考 : <https://vercel.com/docs/limits/fair-use-guidelines#commercial-usage>
 
 :::message
-途中で商用利用したい場合には、cloudflare pages(商用可)への移行も可能なので最初にVercelをホスト先にするのはありだと思います。
+途中で商用利用したい場合には、Cloudflare Pages(商用可)への移行も簡単なので、最初にVercelをホスト先にするのはありだと思います。
 :::
 
 ### Next.jsと開発元が同じ
@@ -89,15 +90,15 @@ Nextjsに最適化されたインフラストラクチャが構築されてい�
 アナリティクスを提供しているが、1ヶ月という期間しか見れないようです。
 
 **アナリティクスのパフォーマンスも高い**
-> Vercel Web アナリティクスは**Google アナリティクスの 44 分の 1 のサイズな**ので、優れたサイト パフォーマンスを維持できます。
+> Vercel Web アナリティクスは**Google アナリティクスの 44 分の 1 のサイズ**なので、優れたサイト パフォーマンスを維持できます。
 参考 : <https://vercel.com/blog/vercel-web-analytics-is-now-generally-available>
 >
 
 :::message
-アナリティクスの部分は、より詳細にみれて無料であるsentryやdatadogにしてもいいかも知れません。
+アナリティクスの部分は、より詳細にみれて無料であるSentryやDatadogにしてもいいかも知れません。
 :::
 
-## **Github Pages**
+## **GitHub Pages**
 
 ### 特徴
 
@@ -105,7 +106,7 @@ Nextjsに最適化されたインフラストラクチャが構築されてい�
 - 開発者側でのヘッダー付与が不可(静的ホストしかできない)
 - サーバーサイド言語のデプロイはできない
 
-開発をGithubで統一して行えるのは、開発効率も上がると思うのでメリットだと思います。
+開発をGitHubで統一して行えるのは、開発効率も上がると思うのでメリットだと思います。
 
 ### 商用利用不可
 
@@ -121,11 +122,11 @@ Nextjsに最適化されたインフラストラクチャが構築されてい�
 
 よって、ヘッダーをカスタマイズしたい場合には向かないと考えられます。
 
-しかし、CloudflareのようなCDN（コンテンツデリバリーネットワーク）サービスを使用することで、プロキシを介してカスタムヘッダーを追加することが可能なようです。Cloudflareは、GitHub Pagesに対するリクエストを中継する際に、必要なヘッダーを付与できます。
+しかし、CloudflareのようなCDN（コンテンツデリバリーネットワーク）サービスを使用することで、リバースプロキシを介してカスタムヘッダーを追加することが可能なようです。Cloudflareは、GitHub Pagesに対するリクエストを中継する際に、必要なヘッダーを付与できます。
 
 やり方はありますが、ちょっと手間かかりそうですね。
 :::message
-自分はsqlite.wasmを利用したかったのですが、このヘッダー付与が難しそうだったのでGithub Pagesの利用は断念しました。
+自分はsqlite.wasmを利用したかったのですが、このヘッダー付与が難しそうだったのでGitHub Pagesの利用は断念しました。
 
 > Warning
 For this to work, you need to set the following headers on your server:
@@ -136,7 +137,7 @@ For this to work, you need to set the following headers on your server:
 :::
 
 **.htaccessをサポートしてない（たぶん）**
-.htaccessの設定をいじることでカスタムヘッダーを利用できると思ったのですが、Github Pagesはその辺りをサポートしていないっぽいです。
+.htaccessの設定をいじることでカスタムヘッダーを利用できると思ったのですが、GitHub Pagesはその辺りをサポートしていないっぽいです。
 公式ドキュメントでは触れられていないですが、そういった(古い)記事を見ます。
 
 ### サーバーサイド言語のデプロイはできない
@@ -159,7 +160,7 @@ Next.jsを静的ホストする場合に使えます。
 - アナリティクス利用可
 - 高パフォーマンス
 
-商用利用が可能なホスティングサービスであり、cloudflareの他サービスとの連携もできるのでセキュリティとパフォーマンスの2つを兼ねることが可能です。
+商用利用が可能なホスティングサービスであり、Cloudflareの他サービスとの連携もできるのでセキュリティとパフォーマンスの2つを兼ねることが可能です。
 
 ### 商用利用が可能
 
@@ -194,7 +195,7 @@ Cloudflare Pagesは簡単にデプロイすることができ、WAFやCDNとも�
 
 Cloudflareは世界中にCDNエッジサーバーを配置しているため、パフォーマンスを高めることができます。
 
-> ![cloudflareエッジサーバー](https://storage.googleapis.com/zenn-user-upload/afe467c879a1-20241102.png)
+> ![Cloudflareエッジサーバー](https://storage.googleapis.com/zenn-user-upload/afe467c879a1-20241102.png)
 > 参考 : <https://www.cloudflare.com/ja-jp/network/>
 
 ### 参考
@@ -241,7 +242,7 @@ Vercelにデプロイするのと同じノリでデプロイできます。
 認証サービスであるAmazon Cognito、NoSQL データベースサービスのDynamoDB、オブジェクトストレージサービス（画像などを保存）であるS3などとの連携が手軽にできます。
 
 ただ、コスト面がまだ調査不足で判明していないので後ほど追記します。
-便利そうだけど、コストによるという感じになりそうです。この後紹介するCloud Runもそうですが、Cloud従量課金制なので気をつけ手使いたいですね。
+便利そうだけど、コストによるという感じになりそうです。この後紹介するCloud Runもそうですが、従量課金制なので気をつけて使いたいですね。
 
 ### 参考
 
@@ -281,7 +282,7 @@ Cloud Runを使う場合、ある程度コンテナ技術への理解が必要�
 
 ### どんな言語でもOK
 
-Cloud Runはコンテナをベースとしているので、dockerで動かせる技術であれば動作します。
+Cloud Runはコンテナをベースとしているので、任意の言語でコードを作成でき、任意のバイナリやフレームワークを使用できます。
 そのため、バックエンドでGoやRailsなどをデプロイしたいと言った場合にも活用できます。
 > 任意の言語で書かれたコードのサポート : Cloud Run はコンテナをベースとしているので、任意の言語でコードを作成でき、任意のバイナリやフレームワークを使用できます。
 > 参考 : <https://cloud.google.com/blog/ja/products/containers-kubernetes/when-to-use-google-kubernetes-engine-vs-cloud-run-for-containers>
@@ -340,8 +341,7 @@ AWS、GCPなどのCloudサービスは、特にDBの費用が大きいです。�
 <https://cloud.google.com/run?hl=ja>
 <https://cloud.google.com/run/docs/overview/what-is-cloud-run?hl=ja>
 <https://envader.plus/article/413>
-
-コスト
+**Cloud Runコストについて**
 <https://cloud.google.com/run/pricing>
 <https://zenn.dev/tellernovel_inc/articles/d200f595aa68e5>
 
