@@ -274,13 +274,11 @@ ECS on Fargateはインフラを構築するのに学習コストがかかるほ
 
 ## Amplify
 
-### 特徴
+追加予定です。
 
-追加予定
+### 参考
 
-- node.jsのバージョン
-- AWSは他のサービスと連携できない
-
+<https://blog.ashcolor.jp/blog/programming/vercel-vs-amplify>
 <https://docs.aws.amazon.com/ja_jp/amplify/latest/userguide/ssr-supported-features.html>
 
 ## 類似の記事
