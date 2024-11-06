@@ -6,7 +6,7 @@ topics: ["Nextjs","Netlify","Vercel","CloudflarePages","CloudRun"]
 published: true
 ---
 
-**本記事ではフリープランで利用することを想定しています(CloudRun、Amplify除く)。**
+## 本記事ではフリープランで利用することを想定しています(CloudRun、Amplify除く)
 
 比較したホスティングサービス
 
@@ -23,7 +23,7 @@ published: true
 
 今後も良さそうなサービスがあれば、随時アップデートしていきます！
 
-## はじめに
+## 前提
 
 VercelはNext.jsに最適化されたサーバーなので、迷ったらVercelを使いたいです。
 
