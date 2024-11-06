@@ -17,7 +17,7 @@ published: true
 | **Cloudflare Pages** | 可能            | 無料                          |
 | **Netlify**          | 可能            | 無料                        |
 | **AWS Amplify**      | 可能            | 従量課金制　詳細は調査中|
-| **Cloud Run**        | 可能            | 従量課金制 (コストを抑えやすい。数十円程度)                 |
+| **Cloud Run**        | 可能            | 従量課金制 (コストを抑えやすい。月数十円程度)                 |
 
 今回初めて**Cloudflare Pages**と**Cloud Run**を知った方は、ぜひそれだけでも目を通してみて欲しいです！すごくいいサービスなので！
 
